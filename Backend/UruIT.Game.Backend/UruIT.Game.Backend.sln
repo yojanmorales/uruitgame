@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UruIT.Game.Backend", "UruIT.Game.Backend\UruIT.Game.Backend.csproj", "{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E658884A-4B61-4859-918B-A1F7C0C3E0E7}
+	EndGlobalSection
+EndGlobal
