@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UruIT.Game.Backend", "UruIT.Game.Backend\UruIT.Game.Backend.csproj", "{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UruIT.Game.Service", "UruIT.Game.Service\UruIT.Game.Service.csproj", "{53FF1428-6891-44F7-BE85-A4A83E603DCC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UruIT.Game.Bll", "UruIT.Game.Bll\UruIT.Game.Bll.csproj", "{B4B93535-2BA5-4F0C-9613-55E930E909DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UruIT.Game.Model", "UruIT.Game.Model\UruIT.Game.Model.csproj", "{70DFCB25-0622-4929-B7B9-604156F1B23F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UruIT.Game.Test", "UruIT.Game.Test\UruIT.Game.Test.csproj", "{10DB7D05-3FD6-46F5-89AD-4EF6434B26E3}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UruIT.Game.Database", "UruIT.Game.Database\UruIT.Game.Database.sqlproj", "{CEF0DCDB-F6B3-4630-99DE-C8046B737F18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD2F096-E3E4-44DF-8D1F-60DFF2775867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53FF1428-6891-44F7-BE85-A4A83E603DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53FF1428-6891-44F7-BE85-A4A83E603DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53FF1428-6891-44F7-BE85-A4A83E603DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53FF1428-6891-44F7-BE85-A4A83E603DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B93535-2BA5-4F0C-9613-55E930E909DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B93535-2BA5-4F0C-9613-55E930E909DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B93535-2BA5-4F0C-9613-55E930E909DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B93535-2BA5-4F0C-9613-55E930E909DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DFCB25-0622-4929-B7B9-604156F1B23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DFCB25-0622-4929-B7B9-604156F1B23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DFCB25-0622-4929-B7B9-604156F1B23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DFCB25-0622-4929-B7B9-604156F1B23F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DB7D05-3FD6-46F5-89AD-4EF6434B26E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DB7D05-3FD6-46F5-89AD-4EF6434B26E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DB7D05-3FD6-46F5-89AD-4EF6434B26E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DB7D05-3FD6-46F5-89AD-4EF6434B26E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF0DCDB-F6B3-4630-99DE-C8046B737F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF0DCDB-F6B3-4630-99DE-C8046B737F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF0DCDB-F6B3-4630-99DE-C8046B737F18}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CEF0DCDB-F6B3-4630-99DE-C8046B737F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF0DCDB-F6B3-4630-99DE-C8046B737F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF0DCDB-F6B3-4630-99DE-C8046B737F18}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E658884A-4B61-4859-918B-A1F7C0C3E0E7}
+	EndGlobalSection
+EndGlobal
