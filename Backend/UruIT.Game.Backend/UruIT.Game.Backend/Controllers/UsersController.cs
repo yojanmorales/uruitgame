@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNet.OData;
 using Microsoft.AspNet.OData.Query;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using UruIT.Game.Bll;
 using UruIT.Game.Model;
 using UruIT.Game.Service.Layers.Users;
 
@@ -15,8 +12,6 @@ namespace UruIT.Game.Backend.Controllers
         private ODataValidationSettings _validationSettings = new ODataValidationSettings();
 
         public IUserService _service;
-
-
 
         public UsersController(IUserService service)
         {
@@ -31,17 +26,38 @@ namespace UruIT.Game.Backend.Controllers
         }
 
         [HttpPost]
-        public bool Post([FromBody]User user)
+        public IActionResult Post([FromBody]User user)
         {
-            DoCreate(user);
-            return true;
+            return DoCreate(user);
         }
 
-        private void DoCreate(User user)
+        private IActionResult DoCreate(User user)
         {
-            if (user == null)
-                throw new Exception("User is not null");
-            _service.Add(user);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var result = _service.Add(user);
+            if (result)
+                return Ok("User created");
+            else return BadRequest();
+        }
+
+        [HttpPatch]
+        public IActionResult Patch([FromODataUri] int key, [FromBody] Delta<User> user)
+        {
+            return DoUpdate(key, user);
+        }
+
+        private IActionResult DoUpdate(int key, Delta<User> user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            return null;
+            // _service.Add(user);
         }
 
     }

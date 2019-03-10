@@ -10,6 +10,6 @@ namespace UruIT.Game.Service.Layers.Users
     {
         IQueryable<User> Get();
 
-        void Add(User user);
+        bool Add(User user);
     }
 }
