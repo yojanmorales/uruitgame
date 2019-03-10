@@ -44,20 +44,24 @@ namespace UruIT.Game.Backend.Controllers
             else return BadRequest();
         }
 
-        [HttpPatch]
-        public IActionResult Patch([FromODataUri] int key, [FromBody] Delta<User> user)
+        [HttpPut]
+        public IActionResult Put([FromODataUri] int key, [FromBody] User user)
         {
             return DoUpdate(key, user);
         }
 
-        private IActionResult DoUpdate(int key, Delta<User> user)
+        private IActionResult DoUpdate(int key, User user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            return null;
-            // _service.Add(user);
+            user.Id = key;
+            var result = _service.Update(user);
+            if (result)
+                return Ok("User updated");
+            else return BadRequest();
+
         }
 
     }

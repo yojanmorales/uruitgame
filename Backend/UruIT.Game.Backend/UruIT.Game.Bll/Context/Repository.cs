@@ -34,6 +34,7 @@ namespace UruIT.Game.Bll.Context
 
         public void Update(T entity)
         {
+            Context.Entry(entity).State = EntityState.Modified;
             Save();
         }
 

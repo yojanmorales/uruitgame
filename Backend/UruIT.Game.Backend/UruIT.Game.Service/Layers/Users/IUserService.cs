@@ -11,5 +11,8 @@ namespace UruIT.Game.Service.Layers.Users
         IQueryable<User> Get();
 
         bool Add(User user);
+
+        bool Update(User user);
+
     }
 }

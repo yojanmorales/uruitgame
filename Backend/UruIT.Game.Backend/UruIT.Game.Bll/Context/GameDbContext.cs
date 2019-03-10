@@ -11,11 +11,19 @@ namespace UruIT.Game.Bll
         {
         }
 
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Move> Moves { get; set; }
+        public DbSet<Model.Game> Games { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>();
+            modelBuilder.Entity<User>()
+            .HasMany(p => p.Games)
+            .WithOne(b => b.User)
+            .HasForeignKey(b => b.UserId);
+
+            modelBuilder.Entity<Game.Model.Game>();
+            modelBuilder.Entity<Move>();
         }
     }
 }

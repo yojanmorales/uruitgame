@@ -62,7 +62,7 @@ namespace UruIT.Game.Backend
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Working on it!");
             });
         }
 
@@ -70,6 +70,15 @@ namespace UruIT.Game.Backend
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<User>("Users");
+            builder.EntitySet<Move>("Moves");
+            builder.EntitySet<Game.Model.Game>("Games");
+            var userSet = builder.EntitySet<User>("Users");
+            userSet.EntityType.Count().Filter().OrderBy().Expand().Select();
+            var gameSet = builder.EntitySet<Game.Model.Game>("Games");
+            gameSet.EntityType.Count().Filter().OrderBy().Expand().Select();
+            var moveSet = builder.EntitySet<Move>("Moves");
+            moveSet.EntityType.Count().Filter().OrderBy().Expand().Select();
+
 
             return builder.GetEdmModel();
         }

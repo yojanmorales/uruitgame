@@ -8,5 +8,7 @@ namespace UruIT.Game.Bll.Dao.users
         IQueryable<User> Get();
 
         void Add(User user);
+
+        void Update(User user);
     }
 }

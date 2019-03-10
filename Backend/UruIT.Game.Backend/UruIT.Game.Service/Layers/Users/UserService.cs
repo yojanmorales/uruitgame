@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using UruIT.Game.Bll.Dao.users;
 using UruIT.Game.Model;
 
@@ -23,6 +22,12 @@ namespace UruIT.Game.Service.Layers.Users
         public IQueryable<User> Get()
         {
             return _usersBll.Get();
+        }
+
+        public bool Update(User user)
+        {
+            _usersBll.Update(user);
+            return true;
         }
     }
 }

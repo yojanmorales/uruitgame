@@ -8,6 +8,9 @@ namespace UruIT.Game.Bll.Context
 {
     public interface IGameDbContext
     {
-        DbSet<User> User { get; set; }
+        DbSet<User> Users { get; set; }
+
+        DbSet<Move> Moves { get; set; }
+        DbSet<Game.Model.Game> Games { get; set; }
     }
 }
