@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.OData;
 using Microsoft.AspNet.OData.Query;
+using Microsoft.AspNet.OData.Routing;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using UruIT.Game.Model;
@@ -7,6 +8,8 @@ using UruIT.Game.Service.Layers.Users;
 
 namespace UruIT.Game.Backend.Controllers
 {
+
+    [ODataRoutePrefix("users")]
     public class UsersController : ODataController
     {
         private ODataValidationSettings _validationSettings = new ODataValidationSettings();
