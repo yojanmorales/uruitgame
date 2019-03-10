@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UruIT.Game.Bll\UruIT.Game.Bll.csproj" />
+    <ProjectReference Include="..\UruIT.Game.Model\UruIT.Game.Model.csproj" />
+  </ItemGroup>
+
+</Project>
