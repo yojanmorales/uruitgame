@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace UruIT.Game.Bll.Context
@@ -15,11 +16,22 @@ namespace UruIT.Game.Bll.Context
             DbSet = context.Set<T>();
         }
 
-        public void Add(T entity)
+        public T Add(T entity)
         {
             Context.Set<T>().Add(entity);
 
             Save();
+
+            return entity;
+        }
+
+        public IList<T> Add(IList<T> entity)
+        {
+            Context.Set<T>().AddRange(entity);
+
+            Save();
+
+            return entity;
         }
 
         public T Get<TKey>(TKey id)

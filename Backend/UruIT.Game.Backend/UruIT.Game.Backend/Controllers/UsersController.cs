@@ -2,6 +2,7 @@
 using Microsoft.AspNet.OData.Query;
 using Microsoft.AspNet.OData.Routing;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 using UruIT.Game.Model;
 using UruIT.Game.Service.Layers.Users;
@@ -27,6 +28,7 @@ namespace UruIT.Game.Backend.Controllers
         {
             return _service.Get();
         }
+     
 
         [HttpPost]
         public IActionResult Post([FromBody]User user)
@@ -42,8 +44,8 @@ namespace UruIT.Game.Backend.Controllers
                 return BadRequest(ModelState);
             }
             var result = _service.Add(user);
-            if (result)
-                return Ok("User created");
+            if (result.Id != 0)
+                return Ok(result);
             else return BadRequest();
         }
 

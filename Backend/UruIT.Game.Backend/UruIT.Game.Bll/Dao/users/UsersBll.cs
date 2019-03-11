@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UruIT.Game.Bll.Context;
 using UruIT.Game.Model;
 
@@ -14,9 +15,14 @@ namespace UruIT.Game.Bll.Dao.users
             _userRepository = userRepository;
         }
 
-        public void Add(User user)
+        public User Add(User user)
         {
-            _userRepository.Add(user);
+            return _userRepository.Add(user);
+        }
+
+        public List<User> Add(List<User> user)
+        {
+            return _userRepository.Add(user).ToList();
         }
 
         public IQueryable<User> Get()
