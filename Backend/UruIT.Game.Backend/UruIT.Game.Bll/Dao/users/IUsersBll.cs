@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UruIT.Game.Model;
 
 namespace UruIT.Game.Bll.Dao.users
@@ -7,7 +8,9 @@ namespace UruIT.Game.Bll.Dao.users
     {
         IQueryable<User> Get();
 
-        void Add(User user);
+        User Add(User user);
+
+        List<User> Add(List<User> user);
 
         void Update(User user);
     }

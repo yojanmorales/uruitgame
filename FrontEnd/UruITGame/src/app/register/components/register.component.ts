@@ -8,14 +8,13 @@ import * as usersActions from '../stores/actions/register.actions';
 
 @Component({
   selector: 'app-user-register-container',
-  templateUrl: './register.component.html'
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
   player1Model: User;
   player2Model: User;
-  @Input() users: User[];
-  player1:string = "";
-  player2:string = "";
+  @Input() users: User[];  
 
   contactsTrackByFn = (index: number, users: User, ) => users.Id;
   constructor(private route : ActivatedRoute,
@@ -29,12 +28,14 @@ export class RegisterComponent implements OnInit {
   }
 
   
-  startGame():void{
-    console.log(this.player1)
-    console.log(this.player2)
+  startGame():void{    
    
     console.log(this.player1Model);
+    console.log(this.player2Model);
+        
     this.store.dispatch(new usersActions.Add(this.player1Model));
+    this.store.dispatch(new usersActions.Add(this.player2Model));
+    
   }
 
 }

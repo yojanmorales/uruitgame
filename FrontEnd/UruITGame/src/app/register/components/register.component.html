@@ -1,17 +1,22 @@
-<div>
+<div class="cardBox">
 
+  <div class="containerBox">
+      <h3><b>Enter player's Names</b></h3> 
+  
     <div class="">
         <label>Player 1</label>
-        <input [(ngModel)]="player1Model.Name" placeholder="player1"/>
+        <input class="inputtext" [(ngModel)]="player1Model.Name"  required/>
       </div>
 
       <div class="">
         <label>Player 2</label>
-        <input [(ngModel)]="player2.Name" placeholder="player2"/>
+        <input class="inputtext"   [(ngModel)]="player2Model.Name"  required/>
         
       </div>
 
       <div>
-        <button type="button" class="" (click)="startGame()">Start</button> 
+        <button class="buttonBox" (click)="startGame()">Start</button> 
       </div>
+
+    </div>
 </div>

@@ -97,7 +97,8 @@ namespace UruIT.Game.Backend
             gameSet.EntityType.Count().Filter().OrderBy().Expand().Select();
             var moveSet = builder.EntitySet<Move>("Moves");
             moveSet.EntityType.Count().Filter().OrderBy().Expand().Select();
-
+            var action = builder.EntityType<User>().Collection.Action("Post").Returns<string>();
+            action.CollectionEntityParameter<User>("users");
 
             return builder.GetEdmModel();
         }

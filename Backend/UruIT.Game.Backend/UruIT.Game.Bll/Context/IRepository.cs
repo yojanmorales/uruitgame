@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace UruIT.Game.Bll.Context
 {
@@ -6,7 +7,8 @@ namespace UruIT.Game.Bll.Context
     {
         T Get<TKey>(TKey id);
         IQueryable<T> GetAll();
-        void Add(T entity);
+        T Add(T entity);
+        IList<T> Add(IList<T> entity);
         void Update(T entity);
     }
 }
