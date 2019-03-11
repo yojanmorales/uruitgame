@@ -6,7 +6,7 @@ rock, paper and scissors
 # angular and redux (ngrx)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
-the proyect use https://github.com/ngrx
+and [ngrx redux] https://github.com/ngrx
 
 ## Install packages
 
