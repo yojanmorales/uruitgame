@@ -21,6 +21,12 @@ namespace UruIT.Game.Test
                     Name="Player 1"
                 }
             };
+
+        private new User userAdd = new User()
+        {
+            Name = "Testing",
+            Id = 1
+        };
         public ServiceUnitTest()
         {
             _userBllMock = new Mock<IUsersBll>();
@@ -32,7 +38,7 @@ namespace UruIT.Game.Test
         }
         private void SetupCreate()
         {
-            _userBllMock.Setup(a => a.Add(It.IsAny<User>()));
+            _userBllMock.Setup(a => a.Add(It.IsAny<User>())).Returns(userAdd);
         }
 
         [Fact]
@@ -59,12 +65,13 @@ namespace UruIT.Game.Test
             {
                 Name = "Testing"
             };
+         
 
             //Action
             var result = Bll.Add(user);
 
             //Assert
-            Assert.True(result);
+            Assert.Equal(userAdd, result);
         }
     }
 }
