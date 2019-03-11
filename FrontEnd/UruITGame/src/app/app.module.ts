@@ -1,12 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { routes } from './routes';
 import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
-import { EffectsModule } from '@ngrx/effects';
-import { AppEffects } from './app.effects';
+import { Store, StoreModule } from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
+import * as fromRoot from './store/reducers/index.reducers';
+import { UserService } from './register/services/register.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,17 @@ import { AppEffects } from './app.effects';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    StoreModule.forRoot(reducers, { metaReducers }),
-    EffectsModule.forRoot([AppEffects])
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(
+      routes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
+    StoreModule.forRoot(fromRoot.rootReducer),    
+    StoreDevtoolsModule.instrument({ maxAge: 50 }),
+    EffectsModule.forRoot([]) /* Start monitoring app's side effects */    
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
